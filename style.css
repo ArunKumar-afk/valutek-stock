@@ -962,6 +962,11 @@ section[id] { scroll-margin-top: 80px; }
     box-shadow: 0 30px 60px -12px rgba(0,0,0,0.15), 0 15px 30px -10px rgba(59, 130, 246, 0.3);
 }
 
+.feature-img.no-frame {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
 /* Step Cards for Workflow */
 .step-card {
     position: relative;
