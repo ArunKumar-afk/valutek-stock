@@ -46,8 +46,7 @@
                 </div>
             </div>
             <div class="hero-visual fade-in">
-                <!-- Hero SVG Illustration -->
-                <img src="new hero pro max.svg" alt="Valutek AI Dynamics Dashboard" class="hero-image">
+                <img src="hero section.jpg" alt="ValuCore Hero Image" class="hero-image">
             </div>
         </div>
         <!-- Background elements -->
@@ -157,7 +156,7 @@
                     </ul>
                 </div>
                 <div class="feature-image">
-                    <img src="dashboard.png" alt="ValuCore Unified Dashboard" class="feature-img">
+                    <img src="dashboard_stock_1_1773744856173.png" alt="ValuCore Unified Dashboard" class="feature-img">
                 </div>
             </div>
             
@@ -172,7 +171,7 @@
                     </ul>
                 </div>
                 <div class="feature-image">
-                    <img src="mobile.png" alt="ValuCore Mobile App" class="feature-img no-frame">
+                    <img src="mobile_stock_1_1773744893453.png" alt="ValuCore Mobile App" class="feature-img">
                 </div>
             </div>
         </div>
@@ -210,7 +209,7 @@
                     </div>
                 </div>
                 <div class="feature-image">
-                     <img src="workflow.png" alt="ValuCore Connected Workflow" class="feature-img">
+                     <img src="team_stock_1_workflow_1773744933971.png" alt="ValuCore Connected Workflow" class="feature-img">
                 </div>
             </div>
         </div>
@@ -425,6 +424,19 @@
                 } else {
                     navbar.classList.remove('scrolled');
                 }
+
+                // Smooth highlight for Workflow step cards in view
+                const stepCards = document.querySelectorAll('.step-card');
+                stepCards.forEach(card => {
+                    const rect = card.getBoundingClientRect();
+                    const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+                    // Add active state if card is near target center focus
+                    if (rect.top <= (viewHeight * 0.55) && rect.bottom >= (viewHeight * 0.35)) {
+                        card.classList.add('active');
+                    } else {
+                        card.classList.remove('active');
+                    }
+                });
                 
                 let current = '';
                 sections.forEach(section => {
