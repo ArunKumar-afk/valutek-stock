@@ -304,7 +304,7 @@ p {
 
 @media (min-width: 1024px) {
     .hero-content {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1.25fr; /* Give more space to visual column to enlarge image */
     }
 }
 
@@ -334,7 +334,7 @@ p {
 
 .hero-image {
     width: 100%;
-    max-width: 550px;
+    max-width: 700px; /* Increased from 550px to make it enlarged on desktop */
     height: auto;
     filter: drop-shadow(0 20px 40px rgba(59, 130, 246, 0.12));
     transition: transform 0.5s ease-out;
