@@ -1135,11 +1135,12 @@ section[id] { scroll-margin-top: 80px; }
 @media (min-width: 1024px) {
     .feature-row {
         grid-template-columns: 1fr 1fr;
-        align-items: center; /* Center image vertically against cards */
+        align-items: flex-start; /* Required for sticky scroll functionality */
     }
     .feature-content {
-        position: relative; /* Remove sticky to ensure perfect flex centering */
-        padding-bottom: 0rem;
+        position: sticky;
+        top: 120px;
+        padding-bottom: 3rem;
     }
     .feature-row.reverse .feature-content {
         order: 2;
@@ -1464,18 +1465,24 @@ section[id] { scroll-margin-top: 80px; }
 
 /* Workflow Section Fixes */
 .workflow-section {
-    padding: 10rem 0 8rem; /* Prevent navbar overlap */
+    padding: 10rem 0 8rem;
     background-color: var(--background);
     position: relative;
     overflow: hidden;
 }
 
+@media (min-width: 1024px) {
+    .workflow-section .feature-row {
+        align-items: center; /* Override to center specifically for the timeline */
+    }
+}
+
 .workflow-section .feature-content {
-    position: relative;
+    position: relative; /* Maintain fixed vertical center for timeline */
     padding-left: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Internal vertical centering */
+    justify-content: center;
 }
 
 
