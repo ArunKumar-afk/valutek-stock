@@ -1,0 +1,446 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modernize Property Valuation Workflows with ValuCore. Manage field data, reports, approvals, and case progress in one streamlined system.">
+    <title>ValuCore | Modern Property Valuation Software</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo" style="text-decoration: none;">
+                <img src="logo new.png" alt="ValuTek AI">
+                <span class="logo-text">ValuTek.ai</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="product.html">Product</a>
+                <a href="workflow.html">Workflow</a>
+                <a href="blog.html" class="active">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button onclick="document.getElementById('demoModal').classList.add('active');" class="btn btn-primary">Book a Demo</button>
+            </div>
+            <button class="mobile-menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog-section bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="badge">Resources</span>
+                <h2 class="section-title">Latest from our Blog</h2>
+                <p class="section-subtitle">Insights, updates, and news from ValuTek AI.</p>
+            </div>
+            
+            <div id="blog-posts-container" class="blog-grid blog-grid-full">
+                <!-- Blog cards loaded dynamically -->
+                <div class="text-center" style="grid-column: 1 / -1; color: var(--text-secondary);">Loading blog posts...</div>
+            </div>
+
+            <div class="text-center" style="margin-top: 4rem;" id="pagination-controls">
+                <!-- Pagination buttons generated via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section id="demo" class="cta-section">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Ready to scale your valuation operations?</h2>
+                <p>Join modern firms upgrading their workflow with ValuCore.</p>
+                <div class="form-wrapper"><button onclick="document.getElementById('demoModal').classList.add('active');" class="btn btn-primary btn-large">Schedule Now</button></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo" style="text-decoration: none;">
+                <img src="logo new.png" alt="ValuTek AI">
+                <span class="logo-text" style="color: #FFFFFF; font-weight: 800; font-size: 1.5rem; background: none; -webkit-text-fill-color: #FFFFFF;">ValuTek.ai</span>
+            </a>
+                <p class="footer-tagline">Digitizing the backbone of property valuation with connected intelligence.</p>
+            </div>
+            <div class="footer-nav">
+                <h4>Navigation</h4>
+                <a href="index.html">Home</a>
+                <a href="product.html">Product</a>
+                <a href="workflow.html">Workflow</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-social">
+                <h4>Connect</h4>
+                <a href="#">LinkedIn</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 ValuTek AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 0a. Initialize Lenis Smooth Scrolling
+            const lenis = new Lenis({
+                duration: 1.2,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                smooth: true
+            });
+
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+
+            // 0b. Inject Reading Progress Bar
+            const progressBar = document.createElement('div');
+            progressBar.id = 'scroll-progress';
+            document.body.prepend(progressBar);
+
+            // 1. Intersection Observer for Scroll Reveal (Framer Style Stagger)
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const parent = entry.target.parentElement;
+                        const index = Array.from(parent.children).indexOf(entry.target);
+                        if(index >= 0) {
+                            // Stagger delays for better reveal physics
+                            entry.target.style.transitionDelay = `${index * 0.12}s`;
+                        }
+                        if (entry.target.classList.contains('feature-img')) { entry.target.classList.add('slide-down-active'); } else { entry.target.classList.add('visible'); }
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const animateElements = document.querySelectorAll('.card, .feature-row, .stat-item, .step-card, .faq-item, .feature-img');
+            animateElements.forEach(el => observer.observe(el));
+            
+            // 2. Navbar & Scroll Progress Handler
+            const navbar = document.querySelector('.navbar');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            const sections = document.querySelectorAll('section[id]');
+            
+            // 2b. Mobile Menu Toggle
+            const menuToggle = document.getElementById('menu-toggle');
+            const navContainer = document.querySelector('.nav-links');
+            
+            if (menuToggle && navContainer) {
+                menuToggle.addEventListener('click', () => {
+                    navContainer.classList.toggle('active');
+                    menuToggle.classList.toggle('active');
+                    document.body.style.overflow = navContainer.classList.contains('active') ? 'hidden' : '';
+                });
+                
+                // Close menu when link is clicked
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        navContainer.classList.remove('active');
+                        menuToggle.classList.remove('active');
+                        document.body.style.overflow = '';
+                    });
+                });
+            }
+
+            const handleScroll = () => {
+                const winScroll = window.scrollY;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                progressBar.style.width = scrolled + "%";
+
+                if (winScroll > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+
+                // Smooth highlight for Workflow step cards in view
+                const stepCards = document.querySelectorAll('.step-card');
+                stepCards.forEach(card => {
+                    const rect = card.getBoundingClientRect();
+                    const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+                    // Add active state if card is near target center focus
+                    if (rect.top <= (viewHeight * 0.55) && rect.bottom >= (viewHeight * 0.35)) {
+                        card.classList.add('active');
+                    } else {
+                        card.classList.remove('active');
+                    }
+                });
+                
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (winScroll >= (sectionTop - 150)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(a => {
+                    a.classList.remove('active');
+                    if (a.getAttribute('href') === `#${current}`) {
+                        a.classList.add('active');
+                    }
+                });
+            };
+            
+            window.addEventListener('scroll', handleScroll);
+            handleScroll();
+
+            // 3. Spotlight Effect for Cards
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    card.style.setProperty('--mouse-x', `${x}px`);
+                    card.style.setProperty('--mouse-y', `${y}px`);
+                });
+            });
+
+            // 5. FAQ Accordion toggle
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const trigger = item.querySelector('.faq-trigger');
+                trigger.addEventListener('click', () => {
+                    faqItems.forEach(i => { if (i !== item) i.classList.remove('open'); });
+                    item.classList.toggle('open');
+                });
+            });
+
+            // 4. Subtle Parallax for Background Shapes
+            window.addEventListener('mousemove', (e) => {
+                const shape1 = document.querySelector('.shape-1');
+                const shape2 = document.querySelector('.shape-2');
+                
+                if (shape1 && shape2) {
+                    const x = (e.clientX / window.innerWidth - 0.5) * 30;
+                    const y = (e.clientY / window.innerHeight - 0.5) * 30;
+                    
+                    shape1.style.transform = `translate(${x}px, ${y}px)`;
+                    shape2.style.transform = `translate(${-x}px, ${y}px)`;
+                }
+            });
+
+            // 6. Dynamic Blog Feed loading & styling (Paginated)
+            let currentPage = 1;
+            const postsPerPage = 6;
+            let allEntries = [];
+
+            window.renderBlogPosts = function(data) {
+                allEntries = data.feed.entry || [];
+                // Only render if we have data
+                if (allEntries.length > 0) {
+                    renderPage(1, false);
+                } else {
+                     const container = document.getElementById('blog-posts-container');
+                     if(container) container.innerHTML = '<div class="text-center" style="grid-column: 1 / -1; color: var(--text-secondary);">No blog posts found.</div>';
+                }
+            };
+
+            function renderPage(page, scroll = true) {
+                currentPage = page;
+                const container = document.getElementById('blog-posts-container');
+                if (!container) return;
+                
+                // Keep the observer unobserving elements since we're replacing them
+                container.innerHTML = '';
+
+                const startIndex = (page - 1) * postsPerPage;
+                const endIndex = startIndex + postsPerPage;
+                const currentEntries = allEntries.slice(startIndex, endIndex);
+
+                currentEntries.forEach((entry, index) => {
+                    const title = entry.title.$t;
+                    const content = entry.content ? entry.content.$t : "";
+                    
+                    let author = "ValuTek AI";
+                    if (entry.author && entry.author.length > 0) {
+                        const authorObj = entry.author[0];
+                        if (authorObj.name && authorObj.name.$t) {
+                            author = authorObj.name.$t;
+                        } else if (typeof authorObj === 'object') {
+                            const keyString = JSON.stringify(authorObj);
+                            const match = keyString.match(/Sunware Technologies/i);
+                            if (match) author = "Sunware Technologies";
+                        }
+                    }
+
+                    const linkObj = entry.link ? entry.link.find(l => l.rel === 'alternate') : null;
+                    const fallbackLink = linkObj ? linkObj.href : "#";
+
+                    let postId = "";
+                    try {
+                        const idMatch = entry.id.$t.match(/\.post-(\d+)/);
+                        if (idMatch) postId = idMatch[1];
+                    } catch (e) {}
+
+                    const link = postId ? `blog-post.html?id=${postId}` : fallbackLink;
+
+                    let imageUrl = '';
+                    if (entry.media$thumbnail) {
+                        imageUrl = entry.media$thumbnail.url.replace(/\/s72-c([-a-zA-Z0-9_]*)\//, '/s640/');
+                    }
+                    if (!imageUrl || imageUrl.indexOf('img1.blogblog.com') > -1) {
+                         const tempDiv = document.createElement('div');
+                         tempDiv.innerHTML = content;
+                         const img = tempDiv.querySelector('img');
+                         imageUrl = img ? img.src : 'logo.png'; 
+                    }
+
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = content;
+                    let text = tempDiv.textContent || tempDiv.innerText || "";
+                    text = text.replace(/\s+/g, ' ').trim();
+                    const excerpt = text.length > 120 ? text.substring(0, 120) + '...' : text;
+
+                    let publishDate = '';
+                    if(entry.published && entry.published.$t) {
+                        const d = new Date(entry.published.$t);
+                        publishDate = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                    }
+
+                    const card = document.createElement('div');
+                    card.className = 'blog-card visible'; // Add visible right away to prevent invisible items
+                    card.innerHTML = `
+                        <div class="blog-card-image">
+                            <img src="${imageUrl}" alt="${title}">
+                        </div>
+                        <div class="blog-card-content">
+                            <div class="blog-meta" style="display: flex; justify-content: space-between; align-items: center;"><span class="blog-card-author">${author.toUpperCase()}</span><span class="blog-card-date" style="font-size: 0.8rem; color: var(--text-muted); font-weight: 500;">${publishDate}</span></div>
+                            <h3 class="blog-card-title">${title}</h3>
+                            <p class="blog-card-excerpt">${excerpt}</p>
+                            <a href="${link}" class="btn-blog-action">
+                                Read full article 
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-top: 1px;">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    `;
+                    // Very light staggered entrance
+                    card.style.animation = `fadeInUp 0.5s ease forwards ${index * 0.05}s`;
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(15px)';
+                    
+                    container.appendChild(card);
+                });
+                
+                renderPagination();
+                if (scroll) {
+                    const rect = document.getElementById('blog').getBoundingClientRect();
+                    window.scrollTo({ top: window.scrollY + rect.top - 80, behavior: 'smooth' });
+                }
+            }
+
+            function renderPagination() {
+                const totalPages = Math.ceil(allEntries.length / postsPerPage);
+                const paginationControls = document.getElementById('pagination-controls');
+                if (!paginationControls) return;
+                
+                paginationControls.innerHTML = '';
+                paginationControls.style.display = 'flex';
+                paginationControls.style.justifyContent = 'center';
+                paginationControls.style.gap = '0.5rem';
+                paginationControls.style.flexWrap = 'wrap';
+                
+                if (totalPages <= 1) return;
+                
+                if (currentPage > 1) {
+                    const prevBtn = document.createElement('button');
+                    prevBtn.className = 'btn btn-outline';
+                    prevBtn.style.padding = '0.5rem 1.25rem';
+                    prevBtn.style.minWidth = 'auto';
+                    prevBtn.textContent = 'Previous';
+                    prevBtn.onclick = () => renderPage(currentPage - 1);
+                    paginationControls.appendChild(prevBtn);
+                }
+                
+                for(let i = 1; i <= totalPages; i++) {
+                    const pageBtn = document.createElement('button');
+                    pageBtn.className = i === currentPage ? 'btn btn-primary' : 'btn btn-outline';
+                    pageBtn.style.padding = '0.5rem 1.25rem';
+                    pageBtn.style.minWidth = 'auto';
+                    pageBtn.textContent = i;
+                    pageBtn.onclick = () => renderPage(i);
+                    paginationControls.appendChild(pageBtn);
+                }
+                
+                if (currentPage < totalPages) {
+                    const nextBtn = document.createElement('button');
+                    nextBtn.className = 'btn btn-outline';
+                    nextBtn.style.padding = '0.5rem 1.25rem';
+                    nextBtn.style.minWidth = 'auto';
+                    nextBtn.textContent = 'Next';
+                    nextBtn.onclick = () => renderPage(currentPage + 1);
+                    paginationControls.appendChild(nextBtn);
+                }
+            }
+
+            const script = document.createElement('script');
+            script.src = 'https://valutekai.blogspot.com/feeds/posts/default?alt=json-in-script&max-results=50&callback=renderBlogPosts';
+            document.body.appendChild(script);
+        });
+                </script>
+    <!-- Demo Modal -->
+    <div id="demoModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close" onclick="document.getElementById('demoModal').classList.remove('active');">&times;</span>
+            <div class="modal-header">
+                <h3>Book a Demo</h3>
+                <p>See ValuTek in action. We'll show you how to streamline your operations.</p>
+            </div>
+            <form class="demo-form" onsubmit="event.preventDefault(); alert('Demo request submitted!'); document.getElementById('demoModal').classList.remove('active');" style="display: flex; flex-direction: column; gap: 1rem;">
+                <input type="text" placeholder="Name *" required class="form-input" style="width: 100%;">
+                <input type="email" placeholder="Work Email *" required class="form-input" style="width: 100%;">
+                <input type="tel" placeholder="Contact Number" class="form-input" style="width: 100%;">
+                <input type="text" placeholder="Organization Name" class="form-input" style="width: 100%;">
+                <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Submit Request</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

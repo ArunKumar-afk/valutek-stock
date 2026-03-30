@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,10 +10,10 @@
 <body>
     <header class="navbar scrolled">
         <div class="container nav-content">
-            <div class="logo">
+            <a href="index.html" class="logo" style="text-decoration: none;">
                 <img src="logo new.png" alt="ValuTek AI">
                 <span class="logo-text">ValuTek.ai</span>
-            </div>
+            </a>
             <nav class="nav-links">
                 <a href="index.html#home">Home</a>
                 <a href="index.html#product">Product</a>
@@ -57,10 +57,10 @@
     <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-brand">
-                <div class="logo">
-                     <img src="logo new.png" alt="ValuTek AI">
-                     <span class="logo-text" style="color: #FFFFFF; font-weight: 800; font-size: 1.5rem; background: none; -webkit-text-fill-color: #FFFFFF;">ValuTek.ai</span>
-                </div>
+                <a href="index.html" class="logo" style="text-decoration: none;">
+                <img src="logo new.png" alt="ValuTek AI">
+                <span class="logo-text" style="color: #FFFFFF; font-weight: 800; font-size: 1.5rem; background: none; -webkit-text-fill-color: #FFFFFF;">ValuTek.ai</span>
+            </a>
                 <p class="footer-tagline">Digitizing the backbone of property valuation with connected intelligence.</p>
             </div>
             <div class="footer-nav">
@@ -147,6 +147,78 @@
                 }
             };
         });
+                // 7. Draggable Blog Carousel
+            const blogGrid = document.querySelector('.blog-grid');
+            if (blogGrid) {
+                const dragCursor = document.createElement('div');
+                dragCursor.className = 'drag-cursor';
+                dragCursor.textContent = 'Drag';
+                document.body.appendChild(dragCursor);
+                
+                let isDown = false;
+                let startX;
+                let scrollLeft;
+
+                blogGrid.addEventListener('mousedown', (e) => {
+                    if (e.target.closest('a') && e.button !== 1) return; // Allow clicking links
+                    isDown = true;
+                    startX = e.pageX - blogGrid.offsetLeft;
+                    scrollLeft = blogGrid.scrollLeft;
+                    dragCursor.style.transform = 'translate(-50%, -50%) scale(0.85)';
+                });
+
+                blogGrid.addEventListener('mouseleave', () => {
+                    isDown = false;
+                    dragCursor.classList.remove('active');
+                });
+
+                blogGrid.addEventListener('mouseup', () => {
+                    isDown = false;
+                    dragCursor.style.transform = 'translate(-50%, -50%) scale(1)';
+                });
+
+                blogGrid.addEventListener('mousemove', (e) => {
+                    dragCursor.style.left = e.clientX + 'px';
+                    dragCursor.style.top = e.clientY + 'px';
+                    if (!isDown) return;
+                    e.preventDefault();
+                    const x = e.pageX - blogGrid.offsetLeft;
+                    const walk = (x - startX) * 2.5; // Scroll speed multiplier
+                    blogGrid.scrollLeft = scrollLeft - walk;
+                });
+
+                blogGrid.addEventListener('mouseenter', () => {
+                    dragCursor.classList.add('active');
+                });
+            }
+
     </script>
+    <!-- Demo Modal -->
+    <div id="demoModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close" onclick="document.getElementById('demoModal').classList.remove('active');">&times;</span>
+            <div class="modal-header">
+                <h3>Book a Demo</h3>
+                <p>See ValuTek in action. We'll show you how to streamline your operations.</p>
+            </div>
+            <form class="demo-form" onsubmit="event.preventDefault(); alert('Demo request submitted!'); document.getElementById('demoModal').classList.remove('active');" style="display: flex; flex-direction: column; gap: 1rem;">
+                <input type="text" placeholder="Name *" required class="form-input" style="width: 100%;">
+                <input type="email" placeholder="Work Email *" required class="form-input" style="width: 100%;">
+                <input type="tel" placeholder="Contact Number" class="form-input" style="width: 100%;">
+                <input type="text" placeholder="Organization Name" class="form-input" style="width: 100%;">
+                <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Submit Request</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
