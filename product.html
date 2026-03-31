@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,7 +18,7 @@
             </a>
             <nav class="nav-links">
                 <a href="index.html">Home</a>
-                <a href="product.html" class="active">Product</a>
+                <a href="product.html" class="active">ValuCore</a>
                 <a href="workflow.html">Workflow</a>
                 <a href="blog.html">Blog</a>
                 <a href="contact.html">Contact</a>
@@ -36,42 +36,277 @@
 
 
 
-    <!-- Solution / Core Features -->
-    <section id="product" class="solution-section">
+    <!-- White Minimal Product Hero -->
+    <section class="product-hero hero" style="padding: 10rem 0 8rem 0; background: #ffffff; position: relative; border-bottom: 1px solid #f1f5f9;">
+        <div class="container hero-content" style="grid-template-columns: 1fr 1fr; align-items: center; gap: 4rem;">
+            <div class="hero-text fade-in-up">
+                <span class="badge" style="background: rgba(30, 64, 175, 0.05); color: #1e40af; border: 1px solid rgba(30, 64, 175, 0.1); display: inline-flex; align-items: center; gap: 0.5rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 1.912 4.913L18.825 9.825 13.913 11.738 12 16.65l-1.912-4.912-4.913-1.913L10.088 7.913 12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
+                    Autonomous Ecosystem
+                </span>
+                <h1 style="font-size: clamp(2.5rem, 5vw, 4.2rem); margin-top: 1rem; margin-bottom: 1.5rem; line-height: 1.05; color: #0f172a; letter-spacing: -0.03em; font-weight: 800;">Intelligent <br>Infrastructure <br>at Scale.</h1>
+                <p style="color: #475569; font-size: 1.2rem; line-height: 1.6; max-width: 550px; margin-bottom: 2rem;">Valucore transforms static property workflows into a digitally empowered, intelligent architecture—built to solve the complexities of regulated industries.</p>
+                <div class="hero-cta">
+                     <button onclick="document.getElementById('demoModal').classList.add('active');" class="btn btn-primary" style="padding: 1.15rem 2.5rem; font-size: 1.1rem; border-radius: 12px; background: #2563eb;">Request Platform Access</button>
+                </div>
+                
+                <div class="trust-icons" style="display: flex; flex-direction: column; gap: 1rem; margin-top: 2.5rem; align-items: flex-start; border-top: 1px solid #f1f5f9; padding-top: 1.5rem;">
+                    <span style="font-size: 0.65rem; color: #94a3b8; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;">Trusted Enterprise Grade Compliance</span>
+                    <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                         <div style="display: flex; align-items: center; gap: 0.5rem; color: #64748b; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                            SOC 2 Type II
+                         </div>
+                         <div style="display: flex; align-items: center; gap: 0.5rem; color: #64748b; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                            ISO 27001
+                         </div>
+                         <div style="display: flex; align-items: center; gap: 0.5rem; color: #64748b; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                            Bank Grade
+                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual fade-in">
+                <div class="visual-container">
+                    <img src="hero section.webp" alt="ValuCore Hero Image" class="hero-image">
+                    <!-- Floating Widgets inspired by modern dashboard accents -->
+                    <div class="floating-panel widget-1">
+                        <div class="panel-info">
+                            <span class="panel-label">Field Data</span>
+                            <span class="panel-value">Live Sync</span>
+                        </div>
+                        <div class="panel-graph">
+                            <svg class="sparkline" width="60" height="20" viewBox="0 0 60 20">
+                                <path d="M0,15 Q10,5 20,12 T40,2 T60,10" fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="floating-panel widget-2">
+                        <div class="panel-info">
+                            <span class="panel-label">Approvals</span>
+                            <span class="panel-value">99% Automated</span>
+                        </div>
+                        <div class="panel-graph">
+                             <div class="status-indicator">
+                                <span class="pulse-dot"></span>
+                             </div>
+                        </div>
+                    </div>
+                    <!-- Premium Analytic Dashboard Panel -->
+                    <div class="floating-panel widget-3">
+                        <div class="panel-info">
+                            <span class="panel-label">Valuation Speed</span>
+                            <span class="panel-value">2.4x Faster</span>
+                        </div>
+                        <div class="panel-graph">
+                            <svg class="sparkline" width="80" height="25" viewBox="0 0 80 25">
+                                <path d="M0,20 Q10,10 20,18 T40,8 T60,15 T80,5" fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="80" cy="5" r="3" fill="#3B82F6"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Trusted Partners Section (Mirrored from Home) -->
+    <section class="trust-section" style="padding: 4rem 0; background: #ffffff; border-bottom: 1px solid #f1f5f9;">
+        <div class="container">
+            <div class="logo-grid" style="display: flex; justify-content: center; align-items: center; gap: 3rem; opacity: 0.7; filter: grayscale(1); flex-wrap: wrap;">
+                <img src="logo1.png" alt="Partner 1" style="height: 35px; width: auto;">
+                <img src="logo2.png" alt="Partner 2" style="height: 35px; width: auto;">
+                <img src="logo3.png" alt="Partner 3" style="height: 35px; width: auto;">
+                <img src="logo4.png" alt="Partner 4" style="height: 35px; width: auto;">
+                <img src="logo5.png" alt="Partner 5" style="height: 35px; width: auto;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Ideal Users Section - Pure White UI -->
+    <section class="ideal-users-section" style="padding: 8rem 0; background: #ffffff;">
+        <div class="container">
+            <div class="section-header text-center" style="margin-bottom: 4rem;">
+                <span class="badge">Target Sectors</span>
+                <h2 class="section-title">Built for Industry Leaders</h2>
+                <p class="section-subtitle">Valucore scales with the specific needs of diverse property-centric organizations.</p>
+            </div>
+            
+            <div class="grid-4" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <!-- User 1 -->
+                <div class="user-card" style="background: #ffffff; padding: 3rem 2rem; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); border: 1px solid #f1f5f9; text-align: center; transition: transform 0.3s ease;">
+                    <div class="icon-box" style="margin: 0 auto 1.5rem auto; width: 70px; height: 70px; background: #eff6ff; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #2563eb;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line></svg>
+                    </div>
+                    <h3 style="font-size: 1.4rem; color: #1e293b; margin-bottom: 1rem;">Financial <br>Institutions</h3>
+                    <p style="color: #64748b; font-size: 0.95rem;">Streamline credit risk assessment and mortgage application workflows with instant valuation validation.</p>
+                </div>
+                <!-- User 2 -->
+                <div class="user-card" style="background: #ffffff; padding: 3rem 2rem; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); border: 1px solid #f1f5f9; text-align: center; transition: transform 0.3s ease;">
+                    <div class="icon-box" style="margin: 0 auto 1.5rem auto; width: 70px; height: 70px; background: #eff6ff; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #2563eb;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    </div>
+                    <h3 style="font-size: 1.4rem; color: #1e293b; margin-bottom: 1rem;">Valuation <br>Agencies</h3>
+                    <p style="color: #64748b; font-size: 0.95rem;">Unify distributed teams of appraisers on a single codebase with real-time field data synchronization.</p>
+                </div>
+                <!-- User 3 -->
+                <div class="user-card" style="background: #ffffff; padding: 3rem 2rem; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); border: 1px solid #f1f5f9; text-align: center; transition: transform 0.3s ease;">
+                    <div class="icon-box" style="margin: 0 auto 1.5rem auto; width: 70px; height: 70px; background: #eff6ff; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #2563eb;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    </div>
+                    <h3 style="font-size: 1.4rem; color: #1e293b; margin-bottom: 1rem;">Independent <br>Valuators</h3>
+                    <p style="color: #64748b; font-size: 0.95rem;">Empower solo practitioners with professional reporting tools and secure cloud storage for every appraisal.</p>
+                </div>
+                <!-- User 4 -->
+                <div class="user-card" style="background: #ffffff; padding: 3rem 2rem; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); border: 1px solid #f1f5f9; text-align: center; transition: transform 0.3s ease;">
+                    <div class="icon-box" style="margin: 0 auto 1.5rem auto; width: 70px; height: 70px; background: #eff6ff; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #2563eb;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    </div>
+                    <h3 style="font-size: 1.4rem; color: #1e293b; margin-bottom: 1rem;">Legal & Compliance <br>Firms</h3>
+                    <p style="color: #64748b; font-size: 0.95rem;">Automate document verification and legal checks through specialized, audit-ready Agentic AI workflows.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Capabilities (Zig-Zag) -->
+    <section id="capabilities" class="solution-section" style="padding: 100px 0;">
         <div class="container">
             <div class="section-header text-center">
-                <span class="badge">The Solution</span>
-                <h2 class="section-title">One streamlined system for everything</h2>
-                <p class="section-subtitle">ValuCore unites your entire team on a single platform, eliminating friction from intake to final report.</p>
+                <span class="badge">Platform Capabilities</span>
+                <h2 class="section-title">Agentic AI powering enterprise scale</h2>
+                <p class="section-subtitle">Valucore’s intelligent infrastructure seamlessly unites workflow automation, actionable data, and strict banking governance.</p>
             </div>
             
+            <!-- Item 1: Process Orchestration -->
             <div class="feature-row">
                 <div class="feature-content">
-                    <h3>Centralized Case Management</h3>
-                    <p>Track every valuation from initial request to final delivery. View statuses, assigned personnel, and deadlines at a glance.</p>
-                    <ul class="feature-list">
-                        <li>Real-time progress tracking</li>
-                        <li>Automated milestone alerts</li>
-                        <li>Client portal for document uploads</li>
+                    <h3 style="margin-top: 0.5rem;">01. Process Orchestration</h3>
+                    <p>Seamlessly manage the entire property case lifecycle from creation to final approval. Valucore eliminates bottlenecks by unifying disjointed processes into a single source of truth.</p>
+                    <ul class="feature-list" style="margin-top: 2rem;">
+                        <li style="display: flex; gap: 0.75rem; align-items: flex-start; margin-bottom: 1rem;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span style="color: var(--text-secondary); font-size: 1rem;">Complete end-to-end case tracking and automated agency assignments.</span>
+                        </li>
+                        <li style="display: flex; gap: 0.75rem; align-items: flex-start; margin-bottom: 1rem;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span style="color: var(--text-secondary); font-size: 1rem;">Simultaneous execution of Technical (field surveys) and Legal (document validation) workflows.</span>
+                        </li>
                     </ul>
                 </div>
                 <div class="feature-image">
-                    <img src="dashboard_stock_1_1773744856173.png" alt="ValuCore Unified Dashboard" class="feature-img">
+                    <img src="process orch.png" alt="Process Orchestration Dashboard" class="feature-img">
                 </div>
             </div>
             
+            <!-- Item 2: Applied Intelligence (Reverse) -->
             <div class="feature-row reverse">
                 <div class="feature-content">
-                    <h3>Mobile Field Data Collection</h3>
-                    <p>Equip appraisers with a powerful mobile app to capture property details, photos, and sketches on-siteâ€”syncing instantly to the office.</p>
-                    <ul class="feature-list">
-                        <li>Offline mode capabilities</li>
-                        <li>Standardized property forms</li>
-                        <li>Integrated photo management</li>
+                    <h3 style="margin-top: 0.5rem;">02. Applied Intelligence</h3>
+                    <p>Move beyond static data. Leverage Valutek's Agentic AI to automate data retrieval, analyze market trends, and empower your team with conversational data access.</p>
+                    <ul class="feature-list" style="margin-top: 2rem;">
+                        <li style="display: flex; gap: 0.75rem; align-items: flex-start; margin-bottom: 1rem;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span style="color: var(--text-secondary); font-size: 1rem;">Smart valuation metrics generated dynamically based on precise location and market rate trends.</span>
+                        </li>
+                        <li style="display: flex; gap: 0.75rem; align-items: flex-start; margin-bottom: 1rem;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span style="color: var(--text-secondary); font-size: 1rem;">Intelligent dashboard providing real-time trend analysis and predictive workflow filtering.</span>
+                        </li>
                     </ul>
                 </div>
                 <div class="feature-image">
-                    <img src="mobile_stock_1_1773744893453.png" alt="ValuCore Mobile App" class="feature-img">
+                    <img src="intelligence.jpg" alt="Applied Intelligence Analytics" class="feature-img">
+                </div>
+            </div>
+
+            <!-- Item 3: Absolute Governance -->
+            <div class="feature-row">
+                <div class="feature-content">
+                    <h3 style="margin-top: 0.5rem;">03. Absolute Governance</h3>
+                    <p>Maintain strict, bank-grade compliance across all operations. Securely manage external vendors, control feature visibility, and ensure every action is audit-ready.</p>
+                    <ul class="feature-list" style="margin-top: 2rem;">
+                        <li style="display: flex; gap: 0.75rem; align-items: flex-start; margin-bottom: 1rem;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span style="color: var(--text-secondary); font-size: 1rem;">Granular Role-Based Access Control (RBAC) ensuring users only see their defined permissions.</span>
+                        </li>
+                        <li style="display: flex; gap: 0.75rem; align-items: flex-start; margin-bottom: 1rem;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span style="color: var(--text-secondary); font-size: 1rem;">Deep vendor hierarchy management combined with automated, downloadable MIS reporting.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-image">
+                    <img src="ai-governance-framework.jpg" alt="Absolute Governance Controls" class="feature-img">
+                </div>
+            </div>
+
+            <!-- Item 4: Enterprise Scalability (Reverse) -->
+            <div class="feature-row reverse">
+                <div class="feature-content">
+                    <h3 style="margin-top: 0.5rem;">04. Enterprise Scalability</h3>
+                    <p>A platform built to grow with your institution. Valucore's architecture seamlessly integrates with your existing tech stack while dynamically adapting to your business rules.</p>
+                    <ul class="feature-list" style="margin-top: 2rem;">
+                        <li style="display: flex; gap: 0.75rem; align-items: flex-start; margin-bottom: 1rem;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span style="color: var(--text-secondary); font-size: 1rem;">Native API integrations directly into existing core banking systems and mobile app support.</span>
+                        </li>
+                        <li style="display: flex; gap: 0.75rem; align-items: flex-start; margin-bottom: 1rem;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span style="color: var(--text-secondary); font-size: 1rem;">Highly configurable UI layouts, custom calculation logic, and distinct approval matrices.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-image">
+                    <img src="scalable.jpg" alt="Enterprise Scalability Modules" class="feature-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Valucore Advantage - Pure White UI -->
+    <section id="valucore-advantage" class="advantage-section" style="padding: 100px 0; background: #ffffff; border-top: 1px solid #f1f5f9;">
+        <div class="container">
+            <div class="section-header text-center" style="margin-bottom: 4rem;">
+                <span class="badge" style="background: #dbeafe; color: #1e40af;">The Valucore Advantage</span>
+                <h2 class="section-title">Fundamental Transformation</h2>
+                <p class="section-subtitle" style="max-width: 900px; margin: 0 auto;">Adopting Valucore guarantees immediate improvements in efficiency, accuracy, and overall turnaround time by redefining the digital foundation of your operations.</p>
+            </div>
+            
+            <div class="grid-4" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem;">
+                <!-- Advantage 1 -->
+                <div class="card advantage-card" style="padding: 3rem 2rem; background: #ffffff; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); border: 1px solid rgba(37,99,235,0.05); text-align: left;">
+                    <div class="icon-circle" style="width: 50px; height: 50px; background: #2563eb; color: #ffffff; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    </div>
+                    <h3 style="font-size: 1.4rem; color: #1e293b; margin-bottom: 0.75rem;">Unified Platform</h3>
+                    <p style="color: #64748b; font-size: 0.92rem; line-height: 1.6;">A single source of truth that eliminates data silos between departments and external partners.</p>
+                </div>
+                <!-- Advantage 2 -->
+                <div class="card advantage-card" style="padding: 3rem 2rem; background: #ffffff; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); border: 1px solid rgba(37,99,235,0.05); text-align: left;">
+                    <div class="icon-circle" style="width: 50px; height: 50px; background: #2563eb; color: #ffffff; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    </div>
+                    <h3 style="font-size: 1.4rem; color: #1e293b; margin-bottom: 0.75rem;">AI-Driven Automation</h3>
+                    <p style="color: #64748b; font-size: 0.92rem; line-height: 1.6;">Autonomous agents that execute complex multi-step workflows with zero manual intervention required.</p>
+                </div>
+                <!-- Advantage 3 -->
+                <div class="card advantage-card" style="padding: 3rem 2rem; background: #ffffff; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); border: 1px solid rgba(37,99,235,0.05); text-align: left;">
+                    <div class="icon-circle" style="width: 50px; height: 50px; background: #2563eb; color: #ffffff; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <h3 style="font-size: 1.4rem; color: #1e293b; margin-bottom: 0.75rem;">Enterprise Security</h3>
+                    <p style="color: #64748b; font-size: 0.92rem; line-height: 1.6;">Bank-grade encryption and SOC 2 Type II compliance standards embedded into every transaction.</p>
+                </div>
+                <!-- Advantage 4 -->
+                <div class="card advantage-card" style="padding: 3rem 2rem; background: #ffffff; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); border: 1px solid rgba(37,99,235,0.05); text-align: left;">
+                    <div class="icon-circle" style="width: 50px; height: 50px; background: #2563eb; color: #ffffff; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                    </div>
+                    <h3 style="font-size: 1.4rem; color: #1e293b; margin-bottom: 0.75rem;">Complete Visibility</h3>
+                    <p style="color: #64748b; font-size: 0.92rem; line-height: 1.6;">Real-time MIS reporting and granular auditing of every stakeholder in the property case lifecycle.</p>
                 </div>
             </div>
         </div>
@@ -408,6 +643,16 @@
 
                 blogGrid.addEventListener('mouseenter', () => {
                     dragCursor.classList.add('active');
+                });
+            }
+
+            // Mobile Menu Toggle
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            if(menuToggle && navLinks) {
+                menuToggle.addEventListener('click', () => {
+                    menuToggle.classList.toggle('active');
+                    navLinks.classList.toggle('active');
                 });
             }
 
