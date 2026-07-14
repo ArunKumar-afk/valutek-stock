@@ -3,30 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Valutek AI researches, engineers, and deploys proprietary intelligence systems for property valuation and legal compliance.">
+    <meta name="description" content="Valutek AI researches, engineers, and deploys proprietary agentic intelligence systems for property valuation and legal compliance at enterprise scale.">
+    <meta name="keywords" content="Valutek AI, agentic AI, property valuation software, legal compliance AI, ValuCore, enterprise AI platform, real estate technology">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Valutek AI">
+    <link rel="canonical" href="https://valutekai.com/index.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Valutek AI | Autonomous AI for Enterprise Scale">
+    <meta property="og:description" content="Valutek AI builds proprietary agentic intelligence systems for property valuation and legal compliance. Trusted by enterprise banks and financial institutions.">
+    <meta property="og:image" content="https://valutekai.com/logo new.png">
+    <meta property="og:url" content="https://valutekai.com/">
+    <meta property="og:site_name" content="Valutek AI">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Valutek AI | Autonomous AI for Enterprise Scale">
+    <meta name="twitter:description" content="Valutek AI builds proprietary agentic intelligence systems for property valuation and legal compliance.">
+    <meta name="twitter:image" content="https://valutekai.com/logo new.png">
+
     <title>Valutek AI | Autonomous AI for Enterprise Scale</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Valutek AI",
+      "url": "https://valutekai.com",
+      "logo": "https://valutekai.com/logo new.png",
+      "description": "Valutek AI researches, engineers, and deploys proprietary agentic intelligence systems for property valuation and legal compliance.",
+      "sameAs": [],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "url": "https://valutekai.com/contact.html"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "ValuCore Platform",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "SoftwareApplication",
+              "name": "ValuCore",
+              "applicationCategory": "BusinessApplication",
+              "description": "Unified property valuation and legal verification platform for enterprise banks and financial institutions."
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://valutekai.com",
+      "name": "Valutek AI",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://valutekai.com/blog.html?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
-    <header class="navbar">
+    <header class="navbar" role="banner">
         <div class="container nav-content">
             <a href="index.html" class="logo" style="text-decoration: none;">
                 <img src="logo new.png" alt="ValuTek AI">
                 <span class="logo-text">ValuTek.ai</span>
             </a>
-            <nav class="nav-links">
-                <a href="index.html">Home</a>
+            <nav class="nav-links" id="main-nav" aria-label="Main navigation">
                 <a href="product.html">ValuCore</a>
-                <a href="workflow.html">Workflow</a>
                 <a href="blog.html">Blog</a>
                 <a href="contact.html">Contact</a>
             </nav>
             <div class="nav-actions">
                 <button onclick="document.getElementById('demoModal').classList.add('active');" class="btn btn-primary">Book a Demo</button>
             </div>
-            <button class="mobile-menu-toggle" id="menu-toggle">
+            <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -39,7 +102,7 @@
         <div class="container hero-content">
             <div class="hero-text">
                 <span class="badge fade-in-up" style="margin-bottom: 1rem; display: inline-flex; align-items: center; gap: 0.5rem;">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 1.912 4.913L18.825 9.825 13.913 11.738 12 16.65l-1.912-4.912-4.913-1.913L10.088 7.913 12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 1 10 10"/><path d="M12 6a6 6 0 0 1 6 6"/><path d="M12 10a2 2 0 0 1 2 2"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>
                     Next-Gen Agentic Intelligence
                 </span>
                 <h1 class="fade-in-up" style="font-size: clamp(3rem, 6vw, 4.5rem); line-height: 1.1; margin-bottom: 1rem;">Advanced Agentic <br>Intelligence for <br>Global Enterprise.</h1>
@@ -61,7 +124,7 @@
                             ISO 27001
                          </div>
                          <div style="display: flex; align-items: center; gap: 0.5rem; color: #64748b; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22V9m18 13V9M12 2 2 9h20L12 2z"/><path d="M6 9v13M18 9v13M9 9v13M15 9v13"/><line x1="2" y1="22" x2="22" y2="22"/></svg>
                             Bank Grade
                          </div>
                     </div>
@@ -160,7 +223,7 @@
                             </svg>
                         </div>
                         <h3>Proprietary Agentic Engine</h3>
-                        <p>We develop autonomous systems that do more than chat. Our AI agents execute multi-step workflows—retrieving location data, analyzing market trends, and driving approval matrices without manual intervention.</p>
+                        <p>We develop autonomous systems that do more than chat. Our AI agents execute complex logic—retrieving location data, analyzing market trends, and driving approval matrices without manual intervention.</p>
                     </div>
                 </div>
                 <div class="card problem-card" style="--bg-image: url('hero section.webp');">
@@ -178,7 +241,7 @@
                         <p>A true multi-tenant environment. We build systems capable of securely partitioning data across thousands of vendors, banks, and legal firms while running on a single, highly scalable infrastructure.</p>
                     </div>
                 </div>
-                <div class="card problem-card" style="--bg-image: url('team_stock_1_workflow_1773744933971.png');">
+                <div class="card problem-card" style="--bg-image: url('intelligence.jpg');">
                     <div class="card-bg-overlay"></div>
                     <div class="card-content-wrap">
                         <div class="icon-circle">
@@ -197,56 +260,96 @@
         </div>
     </section>
 
-
-
-
-
-
-    
-    <!-- Workflow Visualization Section -->
-    <section id="workflow" class="workflow-section bg-light">
+    <!-- Workflow Section -->
+    <section id="workflow" class="workflow-section">
         <div class="container">
             <div class="section-header text-center">
                 <span class="badge">The Workflow</span>
-                <h2 class="section-title">From request to report in minutes</h2>
-                <p class="section-subtitle">A connected workspace that guides valuation data securely to its destination.</p>
+                <h2 class="section-title" style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; letter-spacing: -0.02em;">From request to report in minutes</h2>
+                <p class="section-subtitle" style="max-width: 560px; margin: 0 auto;">A connected workspace that guides valuation data securely to its destination.</p>
             </div>
-            <div class="feature-row">
-                <div class="feature-content">
-                    <div class="step-card">
-                        <span class="step-num">01</span>
-                        <h3>Request Intake</h3>
+
+            <!-- Horizontal Timeline -->
+            <div class="wf-timeline">
+                <div class="wf-step">
+                    <div class="wf-icon-wrap">
+                        <div class="wf-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                        </div>
+                        <div class="wf-line"></div>
+                    </div>
+                    <div class="wf-num">01</div>
+                    <div class="wf-content">
+                        <h4>Request Intake</h4>
                         <p>Orders are automatically ingested and assigned to field personnel based on location and workload.</p>
                     </div>
-                    <div class="step-card">
-                        <span class="step-num">02</span>
-                        <h3>Field Inspection</h3>
+                </div>
+
+                <div class="wf-step">
+                    <div class="wf-icon-wrap">
+                        <div class="wf-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div class="wf-line"></div>
+                    </div>
+                    <div class="wf-num">02</div>
+                    <div class="wf-content">
+                        <h4>Field Inspection</h4>
                         <p>Appraisers capture property details and sync photos instantly to the backend without paper notes.</p>
                     </div>
-                    <div class="step-card">
-                        <span class="step-num">03</span>
-                        <h3>Automatic Compilation</h3>
+                </div>
+
+                <div class="wf-step">
+                    <div class="wf-icon-wrap">
+                        <div class="wf-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                        </div>
+                        <div class="wf-line"></div>
+                    </div>
+                    <div class="wf-num">03</div>
+                    <div class="wf-content">
+                        <h4>Auto Compilation</h4>
                         <p>Field data auto-populates required valuation forms and sketches, lowering calculation errors.</p>
                     </div>
-                    <div class="step-card">
-                        <span class="step-num">04</span>
-                        <h3>Report Approval</h3>
+                </div>
+
+                <div class="wf-step wf-step-last">
+                    <div class="wf-icon-wrap">
+                        <div class="wf-icon wf-icon-final">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                    </div>
+                    <div class="wf-num">04</div>
+                    <div class="wf-content">
+                        <h4>Report Approval</h4>
                         <p>Managers review, approve via digital dash, and securely dispatch reports back to the client.</p>
                     </div>
                 </div>
-                <div class="feature-image">
-                     <img src="team_stock_1_workflow_1773744933971.png" alt="ValuCore Connected Workflow" class="feature-img">
+            </div>
+
+            <!-- Bottom image strip -->
+            <div class="wf-image-strip">
+                <img src="team_stock_1_workflow_1773744933971.png" alt="Team collaborating on property valuation workflow">
+                <div class="wf-image-overlay">
+                    <div class="wf-overlay-pill">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        End-to-end in one platform
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
 
+
+    
+
+
     <!-- Outcomes / Benefits -->
     <section class="benefits-section bg-blue gradient-bg">
         <div class="container text-center text-white">
             <h2 class="section-title">Proven impact at enterprise scale</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 3rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 1.5rem;">
                 <div class="stat-item" style="padding: 1.5rem;">
                     <div class="stat-value" style="font-size: 3.5rem; font-weight: 700; margin-bottom: 0.5rem;">3M+</div>
                     <div class="stat-label" style="font-size: 1.1rem; opacity: 0.9;">Appraisals Processed</div>
@@ -318,7 +421,7 @@
                 <div class="text-center" style="grid-column: 1 / -1; color: var(--text-secondary);">Loading blog posts...</div>
             </div>
 
-            <div class="text-center" style="margin-top: 4rem;">
+            <div class="text-center" style="margin-top: 2rem;">
                 <a href="https://valutekai.blogspot.com/" target="_blank" class="btn btn-primary btn-all-insights">See all insights</a>
             </div>
         </div>
@@ -329,7 +432,7 @@
         <div class="container">
             <div class="cta-box">
                 <h2>Ready to scale your valuation operations?</h2>
-                <p>Join modern firms upgrading their workflow with ValuCore.</p>
+                <p>Join modern firms upgrading their operations with ValuCore.</p>
                 <div class="form-wrapper"><button onclick="document.getElementById('demoModal').classList.add('active');" class="btn btn-primary btn-large">Schedule Now</button></div>
             </div>
         </div>
@@ -350,7 +453,6 @@
                 <h4>Navigation</h4>
                 <a href="index.html">Home</a>
                 <a href="product.html">ValuCore</a>
-                <a href="workflow.html">Workflow</a>
                 <a href="blog.html">Blog</a>
                 <a href="contact.html">Contact</a>
             </div>
@@ -411,7 +513,7 @@
                 });
             }, observerOptions);
 
-            const animateElements = document.querySelectorAll('.card, .feature-row, .stat-item, .step-card, .faq-item, .feature-img');
+            const animateElements = document.querySelectorAll('.card, .feature-row, .stat-item, .wf-step, .faq-item, .feature-img');
             animateElements.forEach(el => observer.observe(el));
             
             // 2. Navbar & Scroll Progress Handler
@@ -452,18 +554,6 @@
                     navbar.classList.remove('scrolled');
                 }
 
-                // Smooth highlight for Workflow step cards in view
-                const stepCards = document.querySelectorAll('.step-card');
-                stepCards.forEach(card => {
-                    const rect = card.getBoundingClientRect();
-                    const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
-                    // Add active state if card is near target center focus
-                    if (rect.top <= (viewHeight * 0.55) && rect.bottom >= (viewHeight * 0.35)) {
-                        card.classList.add('active');
-                    } else {
-                        card.classList.remove('active');
-                    }
-                });
                 
                 let current = '';
                 sections.forEach(section => {
@@ -529,7 +619,11 @@
                 container.innerHTML = '';
 
                 if(entries.length === 0) {
-                     container.innerHTML = '<div class="text-center" style="grid-column: 1 / -1; color: var(--text-secondary);">No blog posts found.</div>';
+                     container.innerHTML = `
+                        <div style="grid-column: 1 / -1; text-align: center; padding: 5rem 2rem;">
+                            <h3 style="font-size: 1.75rem; color: var(--text-primary); margin-bottom: 0.75rem;">Blogs Coming Soon</h3>
+                            <p style="color: var(--text-secondary); font-size: 1.05rem; max-width: 420px; margin: 0 auto;">We're working on insightful content for you. Check back soon for updates, news, and expert insights from ValuTek AI.</p>
+                        </div>`;
                      return;
                 }
 
@@ -658,15 +752,6 @@
                 });
             }
 
-            // Mobile Menu Toggle
-            const menuToggle = document.getElementById('menu-toggle');
-            const navLinks = document.querySelector('.nav-links');
-            if(menuToggle && navLinks) {
-                menuToggle.addEventListener('click', () => {
-                    menuToggle.classList.toggle('active');
-                    navLinks.classList.toggle('active');
-                });
-            }
 
     </script>
     <!-- Demo Modal -->

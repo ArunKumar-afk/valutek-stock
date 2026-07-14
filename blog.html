@@ -3,23 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Modernize Property Valuation Workflows with ValuCore. Manage field data, reports, approvals, and case progress in one streamlined system.">
-    <title>ValuCore | Modern Property Valuation Software</title>
+    <meta name="description" content="Read the latest insights, updates, and expert analysis from Valutek AI on property valuation, agentic AI, and enterprise financial technology.">
+    <meta name="keywords" content="Valutek AI blog, property valuation insights, agentic AI articles, fintech blog, enterprise AI news, real estate technology">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Valutek AI">
+    <link rel="canonical" href="https://valutekai.com/blog.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Blog | Valutek AI Insights & Updates">
+    <meta property="og:description" content="Expert insights on property valuation, agentic AI systems, and enterprise financial technology from the Valutek AI team.">
+    <meta property="og:image" content="https://valutekai.com/logo new.png">
+    <meta property="og:url" content="https://valutekai.com/blog.html">
+    <meta property="og:site_name" content="Valutek AI">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog | Valutek AI Insights & Updates">
+    <meta name="twitter:description" content="Expert insights on property valuation, agentic AI, and enterprise fintech from Valutek AI.">
+    <meta name="twitter:image" content="https://valutekai.com/logo new.png">
+
+    <title>Blog | Valutek AI Insights, Updates & Expert Analysis</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Valutek AI Blog",
+      "url": "https://valutekai.com/blog.html",
+      "description": "Expert insights on property valuation, agentic AI systems, and enterprise financial technology.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Valutek AI",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://valutekai.com/logo new.png"
+        }
+      }
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
-    <header class="navbar">
+    <header class="navbar scrolled">
         <div class="container nav-content">
             <a href="index.html" class="logo" style="text-decoration: none;">
                 <img src="logo new.png" alt="ValuTek AI">
                 <span class="logo-text">ValuTek.ai</span>
             </a>
             <nav class="nav-links">
-                <a href="index.html">Home</a>
                 <a href="product.html">ValuCore</a>
-                <a href="workflow.html">Workflow</a>
                 <a href="blog.html" class="active">Blog</a>
                 <a href="contact.html">Contact</a>
             </nav>
@@ -81,7 +117,6 @@
                 <h4>Navigation</h4>
                 <a href="index.html">Home</a>
                 <a href="product.html">ValuCore</a>
-                <a href="workflow.html">Workflow</a>
                 <a href="blog.html">Blog</a>
                 <a href="contact.html">Contact</a>
             </div>
@@ -264,7 +299,11 @@
                     renderPage(1, false);
                 } else {
                      const container = document.getElementById('blog-posts-container');
-                     if(container) container.innerHTML = '<div class="text-center" style="grid-column: 1 / -1; color: var(--text-secondary);">No blog posts found.</div>';
+                     if(container) container.innerHTML = `
+                        <div style="grid-column: 1 / -1; text-align: center; padding: 6rem 2rem;">
+                            <h3 style="font-size: 1.75rem; color: var(--text-primary); margin-bottom: 0.75rem;">Blogs Coming Soon</h3>
+                            <p style="color: var(--text-secondary); font-size: 1.05rem; max-width: 420px; margin: 0 auto;">We're working on insightful content for you. Check back soon for updates, news, and expert insights from ValuTek AI.</p>
+                        </div>`;
                 }
             };
 
