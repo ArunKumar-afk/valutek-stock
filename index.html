@@ -631,19 +631,8 @@
                     const title = entry.title.$t;
                     const content = entry.content ? entry.content.$t : "";
                     
-                    // author fetch cleanup
+                    // Always show ValuTek AI as author
                     let author = "ValuTek AI";
-                    if (entry.author && entry.author.length > 0) {
-                        const authorObj = entry.author[0];
-                        if (authorObj.name && authorObj.name.$t) {
-                            author = authorObj.name.$t;
-                        } else if (typeof authorObj === 'object') {
-                            // Extract if powershell wrapper stringed it
-                            const keyString = JSON.stringify(authorObj);
-                            const match = keyString.match(/Sunware Technologies/i);
-                            if (match) author = "Sunware Technologies";
-                        }
-                    }
 
                     const linkObj = entry.link ? entry.link.find(l => l.rel === 'alternate') : null;
                     const fallbackLink = linkObj ? linkObj.href : "#";

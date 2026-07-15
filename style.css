@@ -848,7 +848,7 @@ section[id] { scroll-margin-top: 90px; }
     width: 68px;
     height: 68px;
     border-radius: 50%;
-    background-color: rgba(16, 185, 129, 0.08);
+    background-color: rgba(37, 99, 235, 0.08);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -857,7 +857,7 @@ section[id] { scroll-margin-top: 90px; }
 }
 
 .icon-svg {
-    stroke: #10B981; /* Green color similar to image */
+    stroke: #2563eb;
     transition: stroke 0.4s ease;
 }
 
@@ -897,7 +897,7 @@ section[id] { scroll-margin-top: 90px; }
 }
 
 .problem-card:hover .icon-svg {
-    stroke: #10B981;
+    stroke: #2563eb;
 }
 
 .problem-card:hover h3 {

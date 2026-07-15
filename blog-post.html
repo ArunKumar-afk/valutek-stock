@@ -137,9 +137,6 @@
                 document.getElementById('canonical-url').setAttribute('href', window.location.href);
                 
                 let author = "ValuTek AI";
-                if (entry.author && entry.author[0] && entry.author[0].name) {
-                    author = entry.author[0].name.$t;
-                }
                 document.getElementById('post-author').innerText = author.toUpperCase();
 
                 const dateStr = entry.published.$t;
